@@ -98,7 +98,7 @@ F=F';
 X = IC2;
 X_e = IC2.*0;
 
-X_aug = [X;X-X_e];
+X_aug = [X;-5*ones(length(IC2),1)];
 
 A_aug = [A_sys2-B_sys2*K B_sys2*K; 0.*A_sys2 A_sys2-F*C_sys2];
 
